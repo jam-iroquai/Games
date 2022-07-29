@@ -1,0 +1,37 @@
+#Create a class for the functions that each player will use
+
+#Taking each players name
+class playernames:
+    def __init__(self):
+        self.firstname=str(input('Please enter your first name '))
+        self.list=[]
+#entering players input and appending to their list
+    def selection(self):
+        print('Hi ', self.firstname, 'Your Turn.')
+        select=int(input(' Please select 1-9 on the board: '))
+        if select>9 and select<0:
+            select=int(input('Please enter a valid number: '))
+        self.list.append(select)
+        return self.list
+#defining the conditions for victory
+    def victory(self):
+        self.winningconditions=[[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,4,9],[3,5,7]]
+        for i in range(0,len(self.winningconditions,1)):
+            for i in range(0,len(self.winningconditions,1)):
+                
+            print('Well done ',+self.firstname,'you have won')
+
+
+#calling the methods
+player1=playernames()
+player2=playernames()
+player1list=[]
+player2list=[]
+#creating a loop for the game while checking the conditions for victory
+while 1==1:
+    player1.selection()
+    player1.victory
+    print(player1.list)
+    player2.selection()
+    player2.victory
+    print(player2.list)
